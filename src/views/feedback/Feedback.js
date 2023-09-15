@@ -145,7 +145,9 @@ const Charts = () => {
                 <CTableDataCell>{feedback.number}</CTableDataCell>
                 <CTableDataCell>{feedback.service}</CTableDataCell>
                 <CTableDataCell>{feedback.therapist}</CTableDataCell>
-                <CTableDataCell>{feedback.feedback}</CTableDataCell>
+                <CTableDataCell style={{ lineHeight: '1.5', marginBottom: '10px' }}>
+                  <p>{feedback.feedback}</p>
+                </CTableDataCell>
               </CTableRow>
             ))}
           </CTableBody>
