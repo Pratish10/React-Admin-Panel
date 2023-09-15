@@ -12,6 +12,8 @@ import {
   CPagination,
   CPaginationItem,
 } from '@coreui/react'
+import CIcon from '@coreui/icons-react'
+import { cilCaretRight } from '@coreui/icons'
 
 const pageSize = 5
 
@@ -123,6 +125,7 @@ const Charts = () => {
         <CTable align="middle" className="mb-0 border" hover responsive>
           <CTableHead color="light">
             <CTableRow>
+              <CTableHeaderCell></CTableHeaderCell>
               <CTableHeaderCell>Date & Time</CTableHeaderCell>
               <CTableHeaderCell>Name</CTableHeaderCell>
               <CTableHeaderCell>Number</CTableHeaderCell>
@@ -134,6 +137,9 @@ const Charts = () => {
           <CTableBody>
             {displayedFeedback.map((feedback) => (
               <CTableRow key={feedback.id}>
+                <CTableHeaderCell>
+                  <CIcon style={{ color: 'blue' }} icon={cilCaretRight} />
+                </CTableHeaderCell>
                 <CTableDataCell>{feedback.datetime}</CTableDataCell>
                 <CTableDataCell>{feedback.name}</CTableDataCell>
                 <CTableDataCell>{feedback.number}</CTableDataCell>
